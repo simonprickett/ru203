@@ -96,22 +96,39 @@ Then paste in the index creation commands (see the "Building Indexes" section fo
 
 ## Option 3: Use a Gitpod Hosted Environment
 
-TODO add Gitpod instructions and a launch button here...
+Gitpod provides on demand hosted development environments in the cloud.  This is an option that requires no software installation on your machine, and which we are currently trialling for this course.  If you choose this option, we'd love to hear what you think of it - please find us in the `#ru203-querying-indexing-and-full-text-search` channel on the [Redis Discord](https://discord.gg/yEbfGhqhsz) chat server.
 
-Click the button below to start a new cloud development environment using Gitpod:
+Begin by clicking the button below to launch a new cloud development environment with Gitpod:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/simonprickett/ru203)
 
-* Start an environment...
-* Wait for it to load up...
-* Load the data from the terminal in VSCode
-* Open up RedisInsight from the pop up in VS Code
-* Agree to terms for RedisInsight
-* Back in your Gitpod workspace tab, dismiss the Redis 6379 pop up 
+If you're using Gitpod for the first time, a popup will appear asking you to authorize Gitpod to work with your GitHub account.
 
-Note that you'll be working using the RedisInsight tab here.
+You'll see the Gitpod workspace initialize in a new browser tab.  The workspace consists of the VSCode editor and its built in terminal.  A script runs automatically in the terminal to pull down a Redis Stack Docker container and start it, giving you a Redis instance with RediSearch enabled.
 
-Finally, paste in the index creation commands (see the "Building Indexes" section for details).
+Wait until you see the following message in the terminal:
+
+```
+Container redis-stack  Started 
+```
+
+You're now ready to load the course data.  You'll also notice two dialog boxes in the bottom right of the workspace, informing you that services are available on port 8001 and port 6379.  Ignore these for the moment.
+
+Load the course data by typing this command into the terminal:
+
+```bash
+load-data
+```
+
+When this command returns, click on the "x" icon to dismiss the dialog box in the bottom right of the workspace that says "A service is available on port 6379".
+
+Click "Open Browser" in the dialog box that says "A service is available on port 8001".  This will open RedisInsight (a GUI interface to Redis) in a new tab.  Agree to the terms of service for RedisInsight and you should see the RedisInsight browser view showing the contents of your Redis database.
+
+At the bottom of the RedisInsight tab, you'll see a toolbar with "CLI", "Command Helper" and "Profiler" options.  Click on "CLI" to bring up a Redis CLI window.  You'll use this throughout the course wherever `redis-cli` is needed.
+
+If you close or forget your Gitpod workspace tabs, go to [gitpod.io](https://gitpod.io) to see a list of your most recently opened workspaces.
+
+You're now ready to use your Redis CLI window to create the RediSearch indexes for this course.  See the "Building Indexes" section for details.
 
 ## Building Indexes
 

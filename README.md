@@ -14,6 +14,8 @@ Need help getting started? Stop by the [Redis University Discord server](https:/
 
 To get RediSearch, we recommend either launching it from Docker (for beginners) or building it from source and running the locally (more advanced).
 
+> We are also currently trialling the use of [Gitpod](https://gitpod.io) hosted environments for this course.  To use Gitod, you'll need a GitHub account and a web browser: there's no software to install locally.  See Option 3 for details.
+
 ## Option 1: Run RediSearch locally with Docker (Best option for beginners)
 
 First, make sure you have [Docker installed](https://docs.docker.com/get-docker/).
@@ -54,7 +56,7 @@ To create the indexes, first start the Redis CLI:
 docker exec -it redis-search redis-cli
 ```
 
-Then paste in the index creation commands (see the next section for details).
+Then paste in the index creation commands (see the "Building Indexes" section for details).
 
 ## Option 2: Build RediSearch from source
 
@@ -90,9 +92,28 @@ To create the indexes, first start the Redis CLI:
 redis-cli
 ```
 
-Then paste in the index creation commands (see the next section for details).
+Then paste in the index creation commands (see the "Building Indexes" section for details).
 
-## Building indexes
+## Option 3: Use a Gitpod Hosted Environment
+
+TODO add Gitpod instructions and a launch button here...
+
+Click the button below to start a new cloud development environment using Gitpod:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/simonprickett/ru203)
+
+* Start an environment...
+* Wait for it to load up...
+* Load the data from the terminal in VSCode
+* Open up RedisInsight from the pop up in VS Code
+* Agree to terms for RedisInsight
+* Back in your Gitpod workspace tab, dismiss the Redis 6379 pop up 
+
+Note that you'll be working using the RedisInsight tab here.
+
+Finally, paste in the index creation commands (see the "Building Indexes" section for details).
+
+## Building Indexes
 
 This data ships without RediSearch indexes, so you need to create them yourself.
 

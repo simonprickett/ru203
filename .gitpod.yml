@@ -4,6 +4,8 @@ tasks:
      docker-compose pull
     command: |
      alias redis-cli="docker exec -it redis-stack redis-cli" 
+     alias load-data="docker exec -i redis-stack redis-cli < commands.redis > output.txt"
+     echo "Use load-data to load the sample data."
      echo "Use redis-cli to interact with Redis here."
      docker-compose up -d
      gp sync-done finished
